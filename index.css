@@ -20,11 +20,13 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 999;
 }
 .logo {
     font-family: 'Courier New', monospace;
     text-decoration: none;
     color: rgb(255, 255, 255);
+    flex: 0 0 auto;
 }
 .logo span {
     display: block;
@@ -61,6 +63,14 @@ nav a {
     border-radius: 50%;
     font-size: 12px;
 }
+.search-bar {
+    margin-left: auto;
+}
+.search-bar input {
+    padding: 5px;
+    font-size: 14px;
+}
+
 /* Banner */
 #banner {
     margin-top: 80px;
@@ -100,6 +110,8 @@ nav a {
     font-size: 2em;
     margin-bottom: 30px;
 }
+
+
 /* Gallery Section */
 #gallery {
     padding: 80px 5%;
@@ -122,11 +134,18 @@ nav a {
     padding: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+.image-wrapper img {
+    max-height: 350px;
+    object-fit: cover;
+}
 .gallery-item img {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
 }
+
 .gallery-item h3 {
     margin-bottom: 10px;
 }
@@ -221,7 +240,7 @@ footer {
     border-radius: 4px;
     cursor: pointer;
 }
-/* Elements */
+/* Interactive Elements */
 nav a:hover,
 .footer-column button:hover {
     opacity: 0.8;
